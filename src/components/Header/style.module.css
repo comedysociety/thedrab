@@ -1,0 +1,16 @@
+.root {
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 190px;
+  padding-right: 2rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+}
