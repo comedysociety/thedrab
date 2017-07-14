@@ -37,6 +37,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               frontmatter {
                 path
+                draft
               }
             }
           }
@@ -51,6 +52,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         // Create blog posts pages.
         _.each(result.data.allMarkdownRemark.edges, edge => {
+          if (edge.node.frontmatter.draft === true) {
+            return;
+          }
+
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
