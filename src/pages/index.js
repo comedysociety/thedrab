@@ -2,6 +2,8 @@ import React from "react"
 import Link from "gatsby-link"
 import get from "lodash/get"
 import Helmet from "react-helmet"
+import ArticleItem from '../components/ArticleItem';
+import ArticleGrid from '../components/ArticleGrid';
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,9 +17,12 @@ class BlogIndex extends React.Component {
           <li
             key={post.node.frontmatter.path}
           >
-            <Link to={post.node.frontmatter.path}>
-              {post.node.frontmatter.title}
-            </Link>
+            <ArticleItem
+              title={post.node.frontmatter.title}
+              kicker={post.node.frontmatter.kicker}
+              link={post.node.frontmatter.path}
+              image={get(post, "node.frontmatter.image.childImageSharp.resize.src") || null}
+            />
           </li>
         )
       }
@@ -26,9 +31,9 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
-        <ul>
+        <ArticleGrid>
           {pageLinks}
-        </ul>
+        </ArticleGrid>
       </div>
     )
   }
@@ -55,6 +60,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            image {
+              childImageSharp {
+                resize(width: 300, height: 170) {
+                  src
+                }
+              }
+            }
           }
         }
       }

@@ -17,6 +17,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           datePublished={post.frontmatter.date}
           bodyMarkup={post.html}
+          kicker={post.frontmatter.kicker}
         />
       </div>
     )
@@ -39,6 +40,15 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        kicker
+        author
+        image {
+          childImageSharp {
+            resize(width: 1500, height: 1500) {
+              src
+            }
+          }
+        }
       }
     }
   }

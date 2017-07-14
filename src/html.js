@@ -32,8 +32,9 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
-          <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" />
-        </head>
+          <script src="https://use.typekit.net/cob0eos.js"></script>
+            <script dangerouslySetInnerHTML={{ __html: 'try{Typekit.load({ async: true });}catch(e){}' }} />
+          </head>
         <body>
           <div
             id="___gatsby"

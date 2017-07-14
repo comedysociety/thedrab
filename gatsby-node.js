@@ -3,6 +3,24 @@ const Promise = require("bluebird")
 const path = require("path")
 const select = require(`unist-util-select`)
 const fs = require(`fs-extra`)
+const cssnext = require('postcss-cssnext');
+const cssnested = require('postcss-nested');
+const ant = require('postcss-ant')
+
+exports.modifyWebpackConfig = function ({ config }) {
+  config.merge({
+    postcss: [
+      ant,
+      cssnested,
+      cssnext({
+        browsers: ['>1%', 'last 2 versions']
+      }),
+    ],
+  });
+
+  return config;
+};
+
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators

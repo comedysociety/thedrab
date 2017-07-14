@@ -1,0 +1,16 @@
+.root {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: #6D4D2D;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
