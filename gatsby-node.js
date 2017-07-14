@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               frontmatter {
                 path
-                draft
+                published
               }
             }
           }
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         // Create blog posts pages.
         _.each(result.data.allMarkdownRemark.edges, edge => {
-          if (edge.node.frontmatter.draft === true) {
+          if (edge.node.frontmatter.published !== true) {
             return;
           }
 

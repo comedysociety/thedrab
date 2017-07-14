@@ -5,6 +5,7 @@ path: "/regrets/"
 author: "John"
 kicker: "SPICY"
 image: ""
+published: true
 ---
 Don't do it, they said. They all said that. They thought it was a silly idea - something I would regret rather quickly.
 

@@ -13,7 +13,7 @@ class BlogIndex extends React.Component {
     posts.forEach(post => {
       if (post.node.path !== "/404/") {
         const title = get(post, "node.frontmatter.title") || post.node.path
-        if (get(post, "node.frontmatter.draft") === true) {
+        if (get(post, "node.frontmatter.published") !== true) {
           return;
         }
         pageLinks.push(
@@ -60,9 +60,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-            draft
-          }
-          frontmatter {
+            published
             title
             image {
               childImageSharp {
