@@ -4,7 +4,7 @@ date: "2015-05-01T22:12:03.284Z"
 path: "/regrets/"
 author: "John"
 kicker: "SPICY"
-image: ""
+image: "salty_egg.jpg"
 published: true
 ---
 Don't do it, they said. They all said that. They thought it was a silly idea - something I would regret rather quickly.
