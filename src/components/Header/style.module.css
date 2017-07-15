@@ -2,15 +2,16 @@
   padding-top: 2rem;
   margin-bottom: 2.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .logo {
   width: 190px;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .tagline {
   font-style: italic;
   font-size: 1.2rem;
+  padding-bottom: 3px;
 }
