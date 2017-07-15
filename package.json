@@ -23,7 +23,9 @@
     "gatsby-source-filesystem": "^1.0.0",
     "gatsby-transformer-remark": "^1.0.0",
     "gatsby-transformer-sharp": "^1.0.0",
+    "graphql": "^0.10.4",
     "lodash": "^4.15.0",
+    "react-markdown": "^2.5.0",
     "react-responsive-grid": "^0.3.3",
     "react-typography": "^0.15.0",
     "typeface-merriweather": "^0.0.25",
@@ -32,6 +34,7 @@
     "typography-theme-wordpress-2016": "^0.15.1"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.0",
     "gh-pages": "^0.12.0",
     "postcss-ant": "^2.1.1",
     "postcss-cssnext": "^3.0.2",
