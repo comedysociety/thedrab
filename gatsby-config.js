@@ -12,10 +12,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-mdast`,
+      resolve: `@comsoc/gatsby-transformer-mdast`,
       options: {
         plugins: [
-          "gatsby-mdast-copy-linked-files",
+          "@comsoc/gatsby-mdast-copy-linked-files",
         ],
       },
     },

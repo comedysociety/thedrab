@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-transformer-mdast",
+  "name": "@comsoc/gatsby-transformer-mdast",
   "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
-  "version": "",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.1.0",
+  "author": "via Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "bluebird": "^3.5.0",
     "gray-matter": "^2.1.0",
@@ -29,6 +29,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
+    "prepare": "babel src --out-dir . --ignore __tests__",
     "watch": "babel -w src --out-dir . --ignore __tests__"
   }
 }
