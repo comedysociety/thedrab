@@ -15,7 +15,13 @@ John had just shown me his kick-ass tattoo of the outline of a triangle and that
 
 I made a mind map of things I like from The XX to carbonara. Crossing off the sassy tweets and Obama/Biden memes, I knew I had a great shortlist.
 
+![thing](salty_egg.jpg)
+
+## Using *Phattoo*
+
 I thought finding a parlour with a even cost:"ability to serialise needles correctly" ratio was going to be difficult but thanks to a new app a friend of mine is developing, Phattoo, it was easy.
+
+`quiz(how-old)`
 
 People bleat on about how tattoo are *so* difficult but they don't know the power of Google Images, mind mapping techniques and having friends with beta invite codes to their own apps.
 
