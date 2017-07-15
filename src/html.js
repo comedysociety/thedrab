@@ -1,24 +1,24 @@
-import React from "react"
+import React from 'react';
 
-let stylesStr
+let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
+    stylesStr = require(`!raw-loader!../public/styles.css`);
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 }
 
 export default class HTML extends React.Component {
   render() {
-    let css
+    let css;
     if (process.env.NODE_ENV === `production`) {
       css = (
         <style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
-      )
+      );
     }
 
     return (
@@ -32,9 +32,13 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
-          <script src="https://use.typekit.net/cob0eos.js"></script>
-            <script dangerouslySetInnerHTML={{ __html: 'try{Typekit.load({ async: true });}catch(e){}' }} />
-          </head>
+          <script src="https://use.typekit.net/cob0eos.js" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: 'try{Typekit.load({ async: true });}catch(e){}'
+            }}
+          />
+        </head>
         <body>
           <div
             id="___gatsby"
@@ -43,6 +47,6 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    )
+    );
   }
 }

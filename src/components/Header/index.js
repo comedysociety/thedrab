@@ -16,11 +16,12 @@ function Header() {
             <Logo />
           </Link>
         </div>
-        <div className={style.tagline}>{sample(taglines)}</div>
+        <div className={style.tagline}>
+          {sample(taglines)}
+        </div>
       </header>
     </Container>
   );
 }
-
 
 export default Header;

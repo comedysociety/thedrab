@@ -1,5 +1,5 @@
 export default [
-  'News you don\'t need to trust.',
+  "News you don't need to trust.",
   'Beyond trustworthy.',
   'Content for contents sake.',
   'Be content, not content',

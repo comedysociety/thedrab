@@ -1,14 +1,14 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import get from "lodash/get"
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
+import get from 'lodash/get';
 
 import Article from '../components/Article';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, "data.site.siteMetadata.title")
+    const post = this.props.data.markdownRemark;
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
 
     return (
       <div>
@@ -16,15 +16,15 @@ class BlogPostTemplate extends React.Component {
         <Article
           title={post.frontmatter.title}
           datePublished={post.frontmatter.date}
-          bodyMarkup={post.html}
+          content={JSON.parse(post.ast)}
           kicker={post.frontmatter.kicker}
         />
       </div>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -36,20 +36,16 @@ export const pageQuery = graphql`
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
-      html
+      ast
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         kicker
         author
         image {
-          childImageSharp {
-            resize(width: 1500, height: 1500) {
-              src
-            }
-          }
+          relativePath
         }
       }
     }
   }
-`
+`;
