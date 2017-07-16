@@ -7,7 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
-    "@comsoc/gatsby-mdast-copy-linked-files": "^0.1.0",
+    "@comsoc/gatsby-mdast-copy-linked-files": "^0.2.0",
     "@comsoc/gatsby-transformer-mdast": "^0.1.0",
     "gatsby": "^1.0.0",
     "gatsby-link": "^1.0.0",

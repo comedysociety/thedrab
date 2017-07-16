@@ -2,11 +2,12 @@
 # yarn lockfile v1
 
 
-"@comsoc/gatsby-mdast-copy-linked-files@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@comsoc/gatsby-mdast-copy-linked-files/-/gatsby-mdast-copy-linked-files-0.1.0.tgz#2fb09ce554accf19d17bbf364a4dfd22c19dc764"
+"@comsoc/gatsby-mdast-copy-linked-files@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@comsoc/gatsby-mdast-copy-linked-files/-/gatsby-mdast-copy-linked-files-0.2.0.tgz#f85fe80da70b79d07b6f8c2e96290b14626c7413"
   dependencies:
     fs-extra "^3.0.1"
+    image-size "^0.6.0"
     is-relative-url "^2.0.0"
     lodash "^4.17.4"
     unist-util-visit "^1.1.1"
@@ -3859,6 +3860,10 @@ ieee754@^1.1.4:
 image-size@^0.5.1:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+
+image-size@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.0.tgz#abd59fe0877f29a248ef2dd90f783bf57f4c61a7"
 
 imagemin-pngquant@^5.0.0:
   version "5.0.1"

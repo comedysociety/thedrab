@@ -1,3 +1,4 @@
+const sizeOf = require('image-size');
 const visit = require(`unist-util-visit`);
 const isRelativeUrl = require(`is-relative-url`);
 const fsExtra = require(`fs-extra`);
@@ -29,6 +30,9 @@ module.exports = ({ files, markdownNode, markdownAST, getNode }) => {
           `/${linkNode.internal.contentDigest}.${linkNode.extension}`
         );
         node.url = `${relativePath}`;
+        if (['jpg', 'png', 'jpeg'].indexOf(linkPath.split('.').pop()) !== -1) {
+          node.dimensions = sizeOf(linkPath);
+        }
         if (!fsExtra.existsSync(newPath)) {
           fsExtra.copy(linkPath, newPath, err => {
             if (err) {
