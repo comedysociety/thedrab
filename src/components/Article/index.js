@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import isArray from 'lodash/isArray';
 import startsWidth from 'lodash/startsWith';
 
